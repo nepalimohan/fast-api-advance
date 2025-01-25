@@ -19,6 +19,8 @@ class DevConfig(GlobalConfig):
 
 
 class TestConfig(GlobalConfig):
+    DATABASE_URL = "sqlite:///test.db"
+    DB_FORCE_ROLL_BACK: bool = True
     class Config:
         env_prefix: str = "TEST_"
 
